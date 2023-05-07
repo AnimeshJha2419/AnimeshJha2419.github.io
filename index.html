@@ -1,1 +1,175 @@
-"<html>Hello World</html>" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>NLTK Tutorial - Plagiarism Detector</title>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-green-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M17.64 8.28l1.98-1.98c.39-.39.39-1.02 0-1.41L17.15 3.7c-.39-.39-1.02-.39-1.41 0l-1.28 1.28c-.97-.46-2.06-.78-3.21-.91V2H6v5h5c-.12 1.15-.44 2.24-.91 3.21l-1.28 1.28c-.39.39-.39 1.02 0 1.41l1.98 1.98c.39.39 1.02.39 1.41 0l1.28-1.28c.97.46 2.06.78 3.21.91V22h5v-5c.12-1.15.44-2.24.91-3.21l1.28-1.28c.39-.39.39-1.02 0-1.41l-1.98-1.98c-.39-.39-1.02-.39-1.41 0l-1.28 1.28c-.46-.97-.78-2.06-.91-3.21H17.64zM12 15.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 10.5 12 10.5s2.5 1.12 2.5 2.5S13.38 15.5 12 15.5zm3.5-3.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5.67-1.5 1.5-1.5 1.5.67 1.5 1.5z"></path>
+            </svg>
+            <span class="ml-3 text-xl">Plagiarism Detector</span>
+          </a>
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">            
+            <a herf = "/" class="mr-5 hover:text-gray-900"><a href="NLTK.html "> NLTK </a>
+            
+          </nav>
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"><a href="https://github.com/AnimeshJha2419/AnimeshJha2419.github.io">View On GitHub</a>
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+</body>
+<section class="text-gray-600 body-font">
+    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+      <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.grammarly.com%2Fplagiarism-checker&psig=AOvVaw3f5yNgaYVRdt1jy2pCaKpB&ust=1683584353194000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNiIqsye5P4CFQAAAAAdAAAAABAE">
+      <div class="text-center lg:w-2/3 w-full">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">NLTK Library tutorial</h1>
+        <h2 class="title-font sm:text-4xl text-3xl mb-4 font-small text-gray-900">Detecting Plagiarism using NLTK library in Arabic texts</h2>
+        <p class="mb-8 leading-relaxed"> Plagiarism is a serious issue in academia and other fields where originality and authenticity are valued.
+          With the abundance of information available online, it has become easier for individuals to copy and paste text from other sources without proper citation or attribution. 
+          This is where natural language processing (NLP) comes in as a powerful tool for detecting plagiarism and ensuring academic integrity.
+
+          In this tutorial, we will explore how to use the Natural Language Toolkit (NLTK) in Python to build a simple plagiarism detector.
+          We will start by preprocessing the text using techniques such as tokenization, stemming, and lemmatization, and then convert the text into numerical vectors using bag-of-words representation.
+          We will then calculate the cosine similarity between pairs of text vectors and set a threshold for similarity to determine whether a piece of text is plagiarized from another. We will also discuss some advanced techniques for improving the accuracy and performance of the plagiarism detector.
+          By the end of the tutorial, you will have a basic understanding of how to use NLTK for plagiarism detection and can further customize and enhance the detector to fit your specific needs.
+          </p>
+        <div class="flex justify-center">
+          <button class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg"><a href ="https://github.com/AnimeshJha2419/AnimeshJha2419.github.io/blob/main/PlageDetect.ipynb">Python Implementation</a></button>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section>
+  <p class="mb-8 leading-relaxed text-center" style="margin-center: 20px; font-size: 20px;"><b>Introduction</b></p>
+    <p class="mb-0 leading-relaxed text-left" style="margin-left: 20px;">In this tutorial, we will demonstrate how to use the Natural Language Toolkit (NLTK) in Python to build a plagiarism detector for Arabic texts. We will start by preprocessing the Arabic texts using techniques such as tokenization, stemming, and stop-word removal. We will then use TF-IDF vectorization to convert the preprocessed texts into numerical vectors, which will enable us to calculate the cosine similarity between them. Finally, we will set a threshold for the similarity score to determine whether the texts are considered to be plagiarized or not. Throughout the tutorial, we will explain the NLP concepts and techniques used in detail and provide code examples to illustrate the implementation. By the end of the tutorial, you will have a solid understanding of how to use NLTK for plagiarism detection in Arabic texts.<br> <br></p>
+</section>
+
+
+<section>    
+    <p class="mb-8 leading-relaxed text-center" style="margin-center: 20px; font-size: 20px;"><b>Implementation</b></p>
+    <p class="mb-0 leading-relaxed text-left" style="margin-left: 20px;">To train our plagiarism detector for Arabic texts, we first needed a dataset of Arabic texts that we could use for training. We created a folder called "Trainingdata" and added a set of Arabic text files to it. 
+      Next, we used a sample file to check the similarity of the test file with the training file, We search for the training file with the highest similarity score as the potential source of plagiarism for the sample file. This process enabled us to test our plagiarism detector and fine-tune the similarity threshold to achieve the desired level of accuracy.
+      To build our plagiarism detector, we loaded several libraries including "os" and "glob" for file handling, "nltk" for NLP techniques such as tokenization, stemming, and stop-word removal, and "sklearn" for vectorization and cosine similarity calculation. We also downloaded the necessary NLTK data such as stopwords and punkt to ensure the proper functioning of the NLP techniques.<br>
+      </p>
+
+      <pre><code class="python">
+         import os
+         import glob
+         import nltk
+         from nltk.corpus import stopwords
+         from nltk.tokenize import word_tokenize
+         from nltk.stem import SnowballStemmer
+         from sklearn.feature_extraction.text import TfidfVectorizer
+         from sklearn.metrics.pairwise import cosine_similarity
+
+         nltk.download('stopwords')
+         nltk.download('punkt')     
+        </code></pre>
+
+        <p class="mb-8 leading-relaxed text-center" style="margin-center: 20px;"><b> Preprocessing the data</b></p>
+        <p class="mb-0 leading-relaxed text-left" style="margin-left: 20px;">
+The preprocess function is designed to clean and standardize textual data before it can be used for further analysis. Specifically, the function tokenizes the input text into individual words, removes any stop words and punctuation marks, and then stems the remaining words to their root forms.
+
+First, the function tokenizes the text using the word_tokenize() function from the Natural Language Toolkit (NLTK) library. It then removes any stop words and punctuation marks using the set() function to create a set of stop words and a list comprehension to filter out words that are not alphabetic or in the set of stop words. The stopwords package from the NLTK library is used to obtain a set of stop words for the Arabic language.
+
+After removing stop words and punctuation marks, the function uses the SnowballStemmer class from the NLTK library to stem the remaining words to their root forms. The Snowball stemmer algorithm is a widely used stemming algorithm that can be used for various languages including Arabic. Finally, the stemmed words are joined back into a string and returned as the preprocessed text output of the function.</p> 
+        
+        <pre><code class="python">
+         def preprocess(text):
+         tokens = word_tokenize(text)
+         stop_words = set(stopwords.words('arabic'))
+         words = [word for word in tokens if word.isalpha() and word not in stop_words]
+         stemmer = SnowballStemmer('arabic')
+         words = [stemmer.stem(word) for word in words]
+         text = " ".join(words)
+         return text
+      </code></pre>
+
+      <p class="mb-8 leading-relaxed text-center" style="margin-center: 20px;"><b>Training the Detector</b></p>
+    <p class="mb-3 leading-relaxed text-left" style="margin-left: 20px;">
+      
+This train method is used to train a plagiarism detector by preparing the dataset for training. It reads all text files in the specified folder and preprocesses the texts using the preprocess method which tokenizes the text into words, removes stopwords and punctuation, and stems the words. The preprocessed texts are then vectorized using the Term Frequency-Inverse Document Frequency (TF-IDF) method to create a numerical representation of each text. This numerical representation captures the relative importance of each word in the text and its relevance to the entire dataset.
+
+The TfidfVectorizer from scikit-learn is used to perform the vectorization. The resulting vectors and the TfidfVectorizer object are returned as output, along with the filenames of the texts in the dataset. These vectors and the TfidfVectorizer object are used in the compare method to compare a given text with the trained dataset and identify the most similar text.
+      <pre><code class="python">
+         def train(folder):
+         files = glob.glob(os.path.join(folder, "*.txt"))
+         texts = []
+         for file in files:
+         with open(file, encoding='utf-8') as f:
+         text = f.read()
+         texts.append(text)
+         
+         preprocessed_texts = [preprocess(text) for text in texts]
+         
+         vectorizer = TfidfVectorizer()
+         
+         vectors = vectorizer.fit_transform(preprocessed_texts)
+         
+         return vectors, vectorizer, files 
+      </code></pre> 
+       </p>
+
+    <p class="mb-8 leading-relaxed text-center" style="margin-center: 20px;"><b>Compare The Sample Text</b></p>   
+    <p class="mb-2 leading-relaxed text-left" style="margin-left: 20px;">The compare method is used to compare the similarity between the given file and all other files in the trained dataset using cosine similarity. It first reads the contents of the file and preprocesses the text using the preprocess method. Then it vectorizes the preprocessed text using the vectorizer obtained during training, and calculates the cosine similarity between the query vector and the vectors of all texts in the dataset. The index of the text with the highest similarity is then found and used to get the filename of the text. Finally, it returns the filename and percentage similarity between the given file and the most similar text in the dataset, rounded to two decimal points.<br></p>
+    <pre><code class="python">
+         def compare(file, vectors, vectorizer, files):
+         with open(file, encoding='utf-8') as f:
+         text = f.read()
+         preprocessed_text = preprocess(text)
+         query_vector = vectorizer.transform([preprocessed_text])
+        similarities = cosine_similarity(query_vector, vectors)[0]
+    
+        index = similarities.argmax()
+    
+        percentage_similarity = round(similarities[index] * 100, 2)
+    
+       filename = os.path.basename(files[index])
+    
+       return filename, percentage_similarity
+    </code></pre>
+  
+      <p class="mb-8 leading-relaxed text-center" style="margin-center: 20px;"><b> Plagiarism Checking  </b></p>
+      <p class="mb-2 leading-relaxed text-left" style="margin-left: 20px;">This code runs a plagiarism checker on a file located at file by training on a set of text files located in the folder directory. It first calls the train function to train the plagiarism detector on the text files in the folder. Then, it calls the compare function to compare the given file with the trained dataset and prints the most similar file name along with the percentage similarity to the console. The compare function works by first reading the contents of the given file, preprocessing it using the preprocess function, and vectorizing it using the vectorizer. It then calculates the cosine similarity between the vector of the given file and the vectors of all other files in the trained dataset. Finally, it returns the filename of the file with the highest similarity along with the percentage similarity.<br></p>
+      <pre><code class="python">
+           folder = r"C:\Users\91801\Desktop\Trainingdata"
+           file = r"C:\Users\91801\Documents\sample text.txt"
+
+           vectors, vectorizer, files = train(folder)
+
+           filename, percentage_similarity = compare(file, vectors, vectorizer, files)
+           print(f"Most similar file: {filename}")
+           print(f"Percentage similarity: {percentage_similarity}%")     
+           </code></pre>
+      
+  
+      <p class="mb-8 leading-relaxed text-left" style="margin-left: 20px;"> Output for the sample text file:
+        Most similar file: text7.txt
+        Percentage similarity: 61.56%
+        </p>  
+      
+      
+  <section>
+    <p class="mb-8 leading-relaxed text-center" style="margin-center: 20px; font-size: 15px;"><b>References:</b></p>
+    
+    <p class="mb-8 leading-relaxed text-left" style="margin-left: 20px;">
+      <a href="https://www.nltk.org/">NLTK</a><br>
+      <a href="https://medium.com/@heerambavi/simple-plagiarism-detection-using-nlp-1ee60c4f1d48">simple-plagiarism-detection-using-nlp</a><br>
+      <a href="https://github.com/obada-jaras/Arabic-Plagiarism-Detector-Using-NLP">Arabic-Plagiarism-Detector-Using-NLP</a><br>
+    </p>
+  </section>
+  
+</html>
