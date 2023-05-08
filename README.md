@@ -9,7 +9,13 @@ For the license, please refer to the [github repo](https://github.com/nltk/nltk/
 
 Data set and Sample Data:
 
-The training data is provided in the folder "trainingdata" on the repository. The sample data used for checking plagiarism is also provided on the repository as "sample text.txt".
+The training data is provided in the folder "trainingdata" on the repository. The sample data used for checking plagiarism is also provided on the repository as "sample text.txt". These sample files were created by the author in order to run the tutorial.
+
+To use your own files just change the folder and file variables in PlageDetect.ipynb with the paths of your own files:
+
+# Define the folder containing the training data and the file to compare
+folder = r"your\own\path"
+file = r"your\own\path"
 
 About the project:
 
@@ -30,3 +36,11 @@ After tokenization, NLTK's "SnowballStemmer" is used to reduce each word to its 
 Finally, the preprocessed text is vectorized using the TF-IDF (Term Frequency-Inverse Document Frequency) method. This method calculates the frequency of each word in the text and assigns a weight to each word based on how frequently it occurs in the text and how commonly it occurs in the entire corpus. This creates a vector for each document that can be used to compare its similarity to other documents using cosine similarity.
 
 In summary, the NLP used in this project involves removing stop words, tokenizing the text, stemming the words, and vectorizing the preprocessed text using the TF-IDF method. These steps help to extract meaningful features from the text and create a representation that can be used to compare similarity between different documents.
+
+Execution
+
+You can excute the code by clonning the repository using the following command:
+
+git clone [repository_url](https://github.com/AnimeshJha2419/AnimeshJha2419.github.io)
+
+
