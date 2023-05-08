@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title> NLTK </title>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="Purple" class="w-10 h-10 text-purple-500" viewBox="0 0 24 24">
+             <path d="M18 0H6a3 3 0 0 0-3 3v18a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V6l-6-6zM11 17h2v2h-2v-2zm0-6h2v4h-2v-4z"/>
+             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 6.5H10.5V10.5H13.5V6.5ZM12 14V12M12 8V10" />
+            </svg>
 
+            <span class="ml-3 text-xl">NLTK Library</span>
+          </a>
+          
+            <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 ml-auto"><a href="index.html">Tutorial</a></button>
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+</body>
+<section class="text-gray-600 body-font">
+    
+    <p class="mb-8 leading-relaxed text-left" style="margin-center: 20px;"><b> What is NLTK?</b></p>
+    <p class="mb-0 leading-relaxed text-left" style="margin-left: 20px;">NLTK (Natural Language Toolkit) is a popular open-source library used for natural language processing tasks in Python. It provides a comprehensive suite of tools, algorithms, and corpora to facilitate tasks such as tokenization, stemming, lemmatization, part-of-speech tagging, parsing, and semantic reasoning.
+
+One of the main reasons to use NLTK is that it provides a user-friendly and flexible interface for working with textual data. It also offers a wide range of pre-built tools and resources that can save time and effort in developing custom natural language processing solutions. Additionally, NLTK is widely used and supported by the natural language processing community, which means that there are plenty of resources and tutorials available to help users learn and get started with the library.</p>
+    
+  
+  
+    <p class="mb-8 leading-relaxed text-center" style="margin-left: 20px;"><b>What NLTK is NOT?</b></p>
+    <p class="mb-10 leading-relaxed text-left" style="margin-left: 20px;">
+NLTK (Natural Language Toolkit) is not a complete solution for natural language processing (NLP) on its own. While it provides a wide range of tools and resources, it requires knowledge of programming and NLP concepts to use effectively. Additionally, it may not be suitable for all NLP tasks or languages, as its algorithms and resources may not be optimized for certain languages or tasks. It is also not a machine learning library, although it does provide support for training and using machine learning models for NLP tasks. Finally, it is not a substitute for understanding the linguistic and cultural context of the text being processed, which is often crucial for accurate analysis and interpretation.
+    </p>
+    
+
+    <p class="mb-8 leading-relaxed text-center" style="margin-left: 20px;"><b>Installation</b></p>
+    
+    <p class="mb-10 leading-relaxed text-left" style="margin-left: 20px;">You can install NLTK, along with its data and models, effortlessly by using Python Package Index and Setup tools. To install SpaCy on your machine, simply enter the following command:
+        <pre>
+             !pip install nltk                
+            
+        </pre>
+    </p>
+
+    <p class="mb-8 leading-relaxed text-center" style="margin-left: 20px;"><b>Statistical Models</b></p>
+    <p class="mb-8 leading-relaxed text-left" style="margin-left: 20px;">NLTK also provides access to a number of statistical models for natural language processing tasks such as part-of-speech tagging, named entity recognition, sentiment analysis, and machine translation. These models are available through the nltk.download() function and can be installed using the NLTK Downloader.
+
+<br>Some of the popular statistical models available in NLTK include:<br>
+
+averaged_perceptron_tagger: A part-of-speech tagger that uses the averaged perceptron algorithm to make predictions.<br>
+maxent_ne_chunker: A named entity recognizer that uses maximum entropy modeling to identify entities in text.<br>
+vader_lexicon: A lexicon-based sentiment analyzer that uses a list of positive and negative words to score the sentiment of a piece of text.<br>
+
+
+     <p class="mb-8 leading-relaxed text-left" style="margin-left: 20px;">
+The statistical models in NLTK are used for natural language processing tasks such as part-of-speech tagging, named entity recognition, and sentiment analysis. These models are trained on large datasets and use machine learning algorithms to make predictions based on the input text. The averaged perceptron tagger is used for part-of-speech tagging, while the maxent_ne_chunker is used for named entity recognition. The vader_lexicon is a sentiment analyzer that uses a list of positive and negative words to determine the sentiment of a given text. These models provide an efficient and accurate way to perform NLP tasks, making them a valuable resource for researchers and developers in the field.</p>  
+     <p class="mb-8 leading-relaxed text-left" style="margin-left: 20px;">I have listed below few popular statistical models in NLTK: <br>
+
+        <b>MaxEnt Classifier</b>: A maximum entropy classifier used for tasks such as text classification and named entity recognition.<br>
+        
+        <b>Naive Bayes Classifier</b>: A probabilistic classifier used for tasks such as sentiment analysis and spam filtering.<br>
+        
+        <b>Decision Tree Classifier</b>: A machine learning classifier used for tasks such as part-of-speech tagging and text classification. <br></p> 
+    
+        <p class="mb-8 leading-relaxed text-left" style="margin-left: 20px;">Importing these models into your project is a straightforward process. All you have to do is execute the nltk.download() command, as illustrated below:<br>
+        <pre>
+             import nltk
+            
+             nltk.download('averaged_perceptron_tagger')
+             text = "This is an example sentence."
+             tokens = nltk.word_tokenize(text)
+             tags = nltk.pos_tag(tokens)
+             print(tags)
+             
+             nltk.download('maxent_ne_chunker')
+             nltk.download('words')
+             text = "John Smith is a software engineer at Google."
+             tokens = nltk.word_tokenize(text)
+             tags = nltk.pos_tag(tokens)
+             entities = nltk.chunk.ne_chunk(tags)
+             print(entities)
+             
+             from nltk.sentiment import SentimentIntensityAnalyzer
+             nltk.download('vader_lexicon')
+             text = "I love this product!"
+             analyzer = SentimentIntensityAnalyzer()
+             scores = analyzer.polarity_scores(text)
+             print(scores)
+            
+        </pre>
+    </p>
+
+    <p class="mb-8 leading-relaxed text-left" style="margin-left: 20px;"><b>Administrative Information:<br></b>
+        NLTK is distributed under the Apache License, Version 2.0. This is a permissive free software license that allows you to use, distribute, and modify the software as long as you comply with its terms, which include including a copy of the license in any distribution of the software and not using the name of the copyright holder to endorse or promote products derived from the software without prior written permission.<br>
+    </p>
+
+        </html>
