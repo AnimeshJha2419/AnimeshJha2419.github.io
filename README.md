@@ -14,6 +14,7 @@ The training data is provided in the folder "trainingdata" on the repository. Th
 To use your own files just change the folder and file variables in PlageDetect.ipynb with the paths of your own files:
 
 folder = r"your\own\path"
+
 file = r"your\own\path"
 
 About the project:
