@@ -74,39 +74,12 @@ The statistical models in NLTK are used for natural language processing tasks su
         <p class="mb-8 leading-relaxed text-left" style="margin-left: 20px;">Importing these models into your project is a straightforward process. All you have to do is execute the nltk.download() command, as illustrated below:<br>
         <pre>
              import nltk
-            
+             from nltk.classify import MaxentClassifier
+             from nltk.classify import NaiveBayesClassifier
+             from nltk.classify import DecisionTreeClassifier
              nltk.download('averaged_perceptron_tagger')
-             text = "This is an example sentence."
-             tokens = nltk.word_tokenize(text)
-             tags = nltk.pos_tag(tokens)
-             print(tags)
-             
              nltk.download('maxent_ne_chunker')
-             nltk.download('words')
-             text = "John Smith is a software engineer at Google."
-             tokens = nltk.word_tokenize(text)
-             tags = nltk.pos_tag(tokens)
-             entities = nltk.chunk.ne_chunk(tags)
-             print(entities)
-             
-             from nltk.sentiment import SentimentIntensityAnalyzer
              nltk.download('vader_lexicon')
-             text = "I love this product!"
-             analyzer = SentimentIntensityAnalyzer()
-             scores = analyzer.polarity_scores(text)
-             print(scores)
-             
-             nltk.download('averaged_perceptron_tagger')
-             from nltk.tag import PerceptronTagger
-             tagger = PerceptronTagger()
-             
-             nltk.download('maxent_ne_chunker')
-             from nltk.chunk import MaxentChunker
-             chunker = MaxentChunker()
-             
-             nltk.download('vader_lexicon')
-             from nltk.sentiment import SentimentIntensityAnalyzer
-             analyzer = SentimentIntensityAnalyzer()
             
         </pre>
     </p>
