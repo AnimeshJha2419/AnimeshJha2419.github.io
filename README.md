@@ -1,11 +1,11 @@
 # Plagarism Detection using NLTK
 This is a comprehensive tutorial on how to perform Plagarism Detection using NLTK
 
-For the tutorial, please refer to the [website](https://animeshjha2419.github.io/)
+For the tutorial, please refer to the [webpage](https://animeshjha2419.github.io/)
 
 NLTK software license:
 
-For the license, please refer to the [website](https://github.com/nltk/nltk/blob/develop/LICENSE.txt)
+For the license, please refer to the [github repo](https://github.com/nltk/nltk/blob/develop/LICENSE.txt)
 
 Data set and Sample Data:
 
