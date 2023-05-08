@@ -3,6 +3,10 @@ This is a comprehensive tutorial on how to perform Plagarism Detection using NLT
 
 For the tutorial, please refer to the [website](https://animeshjha2419.github.io/)
 
+Data set and Sample Data:
+
+The training data is provided in the folder "trainingdata" on the repository. The sample data used for checking plagiarism is also provided on the repository as "sample text.txt".
+
 About the project:
 This code is designed to help detect plagiarism in Arabic text files. The program works by training on a set of text files in a specified folder, pre-processing the texts, and vectorizing them using the TF-IDF method. The program then compares a given text file with the trained dataset using cosine similarity to determine the similarity score with the most similar training file. The program uses NLTK for pre-processing and the scikit-learn library for vectorizing and calculating cosine similarity.
 
