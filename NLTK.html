@@ -55,11 +55,7 @@ NLTK (Natural Language Toolkit) is not a complete solution for natural language 
     <p class="mb-8 leading-relaxed text-center" style="margin-left: 20px;"><b>Statistical Models</b></p>
     <p class="mb-8 leading-relaxed text-left" style="margin-left: 20px;">NLTK also provides access to a number of statistical models for natural language processing tasks such as part-of-speech tagging, named entity recognition, sentiment analysis, and machine translation. These models are available through the nltk.download() function and can be installed using the NLTK Downloader.
 
-<br>Some of the popular statistical models available in NLTK include:<br>
 
-averaged_perceptron_tagger: A part-of-speech tagger that uses the averaged perceptron algorithm to make predictions.<br>
-maxent_ne_chunker: A named entity recognizer that uses maximum entropy modeling to identify entities in text.<br>
-vader_lexicon: A lexicon-based sentiment analyzer that uses a list of positive and negative words to score the sentiment of a piece of text.<br>
 
 
      <p class="mb-8 leading-relaxed text-left" style="margin-left: 20px;">
@@ -70,7 +66,10 @@ The statistical models in NLTK are used for natural language processing tasks su
         
         <b>Naive Bayes Classifier</b>: A probabilistic classifier used for tasks such as sentiment analysis and spam filtering.<br>
         
-        <b>Decision Tree Classifier</b>: A machine learning classifier used for tasks such as part-of-speech tagging and text classification. <br></p> 
+        <b>Decision Tree Classifier</b>: A machine learning classifier used for tasks such as part-of-speech tagging and text classification. <br>
+        <b>averaged_perceptron_tagger: A part-of-speech tagger that uses the averaged perceptron algorithm to make predictions.<br>
+        <b>maxent_ne_chunker: A named entity recognizer that uses maximum entropy modeling to identify entities in text.<br>
+        <b>vader_lexicon: A lexicon-based sentiment analyzer that uses a list of positive and negative words to score the sentiment of a piece of text.<br></p> 
     
         <p class="mb-8 leading-relaxed text-left" style="margin-left: 20px;">Importing these models into your project is a straightforward process. All you have to do is execute the nltk.download() command, as illustrated below:<br>
         <pre>
@@ -96,6 +95,18 @@ The statistical models in NLTK are used for natural language processing tasks su
              analyzer = SentimentIntensityAnalyzer()
              scores = analyzer.polarity_scores(text)
              print(scores)
+             
+             nltk.download('averaged_perceptron_tagger')
+             from nltk.tag import PerceptronTagger
+             tagger = PerceptronTagger()
+             
+             nltk.download('maxent_ne_chunker')
+             from nltk.chunk import MaxentChunker
+             chunker = MaxentChunker()
+             
+             nltk.download('vader_lexicon')
+             from nltk.sentiment import SentimentIntensityAnalyzer
+             analyzer = SentimentIntensityAnalyzer()
             
         </pre>
     </p>
