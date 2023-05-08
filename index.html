@@ -133,15 +133,15 @@ The TfidfVectorizer from scikit-learn is used to perform the vectorization. The 
          text = f.read()
          preprocessed_text = preprocess(text)
          query_vector = vectorizer.transform([preprocessed_text])
-        similarities = cosine_similarity(query_vector, vectors)[0]
+         similarities = cosine_similarity(query_vector, vectors)[0]
     
-        index = similarities.argmax()
+         index = similarities.argmax()
     
-        percentage_similarity = round(similarities[index] * 100, 2)
+         percentage_similarity = round(similarities[index] * 100, 2)
     
-       filename = os.path.basename(files[index])
+         filename = os.path.basename(files[index])
     
-       return filename, percentage_similarity
+         return filename, percentage_similarity
     </code></pre>
   
       <p class="mb-8 leading-relaxed text-center" style="margin-center: 20px;"><b> Plagiarism Checking  </b></p>
