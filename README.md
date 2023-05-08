@@ -3,6 +3,10 @@ This is a comprehensive tutorial on how to perform Plagarism Detection using NLT
 
 For the tutorial, please refer to the [website](https://animeshjha2419.github.io/)
 
+NLTK software license:
+
+For the license, please refer to the [website](https://github.com/nltk/nltk/blob/develop/LICENSE.txt)
+
 Data set and Sample Data:
 
 The training data is provided in the folder "trainingdata" on the repository. The sample data used for checking plagiarism is also provided on the repository as "sample text.txt".
